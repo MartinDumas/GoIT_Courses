@@ -24,14 +24,13 @@ public class MyLinkedList <T> {
         for (int i = 0; i < index; i++){
             current = current.next;
         }
-        System.out.print("Selected element is - ");
-
         return current.element;
     }
-    public int getSize(){
-        System.out.print("The size of collection is - ");
+
+    public int size(){
         return size;
     }
+
     public void remove(int index){
         Objects.checkIndex(index, size);
         Node<T> current = head;
@@ -55,7 +54,6 @@ public class MyLinkedList <T> {
         head = null;
         tail = null;
         size = 0;
-        System.out.println("Collection has been cleared up");
     }
 
 

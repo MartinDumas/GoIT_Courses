@@ -17,27 +17,23 @@ public class MyQueue<T> {
     public void clear(){
         head = tail = null;
         size = 0;
-        System.out.println("The queue has been cleared up");
     }
-    public int getSize(){
-        System.out.print("The size of collection is - ");
+    public int size(){
         return size;
     }
     public T peek(){
         if (head == null){
             System.out.println("The queue is empty");
         }
-        System.out.print("The first element of queue is - ");
         return head.data;
     }
-    public T pool(){
+    public T poll(){
         if (head == null){
             System.out.println("The queue is empty");
         }
         T element = head.data;
         head = head.next;
         size--;
-        System.out.print("Pooling - ");
         return element;
     }
 

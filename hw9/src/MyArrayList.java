@@ -18,7 +18,7 @@ public class MyArrayList<T> {
          size++;
 
     }
-    public T getIndex(int index){
+    public T get(int index){
         Objects.checkIndex(index, size);
         return elements[index];
     }
@@ -50,7 +50,7 @@ public class MyArrayList<T> {
         this.elements = elements;
     }
 
-    public int getSize() {
+    public int size() {
         return size;
     }
 

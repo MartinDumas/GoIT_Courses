@@ -23,23 +23,18 @@ public class MyStack<T> {
             current.next = current.next.next;
         }
         size--;
-        System.out.printf("Element with index %d has been removed", index);
-        System.out.println();
     }
     public void clear(){
         top = null;
         size = 0;
-        System.out.println("Stack has been cleared up");
     }
-    public int getSize(){
-        System.out.print("The size of stack is - ");
+    public int size(){
         return size;
     }
     public T peek() {
         if (top == null) {
             System.out.println("Stack is empty");
         }
-        System.out.print("The first element of stack is - ");
         return top.data;
     }
     public T pop() {
@@ -49,7 +44,6 @@ public class MyStack<T> {
         T data = top.data;
         top = top.next;
         size--;
-        System.out.print("Popping - ");
         return data;
     }
     public String toString() {

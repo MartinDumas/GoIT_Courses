@@ -17,16 +17,16 @@ public class Main {
         myArrayList.add("and");
         myArrayList.add("GoIt");
         System.out.println(Arrays.toString(myArrayList.getElements()));
-        System.out.println(myArrayList.getSize());
+        System.out.println(myArrayList.size());
 
         myArrayList.remove(7);
         System.out.println(Arrays.toString(myArrayList.getElements()));
-        System.out.println(myArrayList.getSize());
+        System.out.println(myArrayList.size());
         myArrayList.remove(7);
         System.out.println(Arrays.toString(myArrayList.getElements()));
-        System.out.println(myArrayList.getSize());
+        System.out.println(myArrayList.size());
 
-        System.out.println(myArrayList.getIndex(4));
+        System.out.println(myArrayList.get(4));
 
         myArrayList.clear();
         System.out.println(Arrays.toString(myArrayList.getElements()));
@@ -45,14 +45,14 @@ public class Main {
         myLinkedList.add("and");
         myLinkedList.add("GoIt");
         System.out.println(myLinkedList);
-        System.out.println(myLinkedList.getSize());
+        System.out.println(myLinkedList.size());
         System.out.println(myLinkedList.getIndex(4));
         myLinkedList.remove(7);
         myLinkedList.remove(7);
-        System.out.println(myLinkedList.getSize());
+        System.out.println(myLinkedList.size());
         System.out.println(myLinkedList);
         myLinkedList.clear();
-        System.out.println(myArrayList.getSize());
+        System.out.println(myArrayList.size());
         System.out.println(myLinkedList);
 
         System.out.println("--------------------------Queue---------------------------------");
@@ -64,14 +64,14 @@ public class Main {
         myQueue.add(7);
         myQueue.add(9);
         System.out.println(myQueue);
-        System.out.println(myQueue.getSize());
+        System.out.println(myQueue.size());
         System.out.println(myQueue.peek());
-        System.out.println(myQueue.pool());
-        System.out.println(myQueue.getSize());
+        System.out.println(myQueue.poll());
+        System.out.println(myQueue.size());
         System.out.println(myQueue.peek());
         myQueue.clear();
         System.out.println(myQueue);
-        System.out.println(myQueue.getSize());
+        System.out.println(myQueue.size());
 
         System.out.println("--------------------------Stack---------------------------------");
 
@@ -82,15 +82,15 @@ public class Main {
         myStack.push(8);
         myStack.push(10);
         System.out.println(myStack);
-        System.out.println(myStack.getSize());
+        System.out.println(myStack.size());
         myStack.remove(4);
         System.out.println(myStack);
-        System.out.println(myStack.getSize());
+        System.out.println(myStack.size());
         System.out.println(myStack.peek());
         System.out.println(myStack.pop());
         System.out.println(myStack);
         myStack.clear();
-        System.out.println(myStack.getSize());
+        System.out.println(myStack.size());
 
         System.out.println("--------------------------HashMap---------------------------------");
         MyHashMap<String, Integer> myHashMap = new MyHashMap<>();
@@ -98,19 +98,19 @@ public class Main {
         myHashMap.put("Maksym", 21);
         myHashMap.put("Nazar", 17);
         myHashMap.put("Artem", 31);
-        myHashMap.put("Danylo", 45);
+        myHashMap.put(null, 45);
         System.out.println(myHashMap);
 
-        System.out.println(myHashMap.getSize());
+        System.out.println(myHashMap.size());
 
         System.out.println(myHashMap.get("Maksym"));
 
-        myHashMap.remove("Danylo");
+        myHashMap.remove(null);
         System.out.println(myHashMap);
-        System.out.println(myHashMap.getSize());
+        System.out.println(myHashMap.size());
 
         myHashMap.clear();
         System.out.println(myHashMap);
-        System.out.println(myHashMap.getSize());
+        System.out.println(myHashMap.size());
     }
 }
